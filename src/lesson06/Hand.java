@@ -31,10 +31,39 @@ public class Hand {
 
     public Card[] findSameNumberCard() {
         int numberOfCards =hand_.size();
-        Card[] sameCaeds = null;
+        Card[] sameCards = null;
 
         if (numberOfCards > 0) {
+            int lastIndex = numberOfCards-1;
+            Card lastAddedCard = (Card) hand_.get(lastIndex);
+            int lastAddedCardNum = lastAddedCard.getNumber();
 
+            for(int index=0; index < lastIndex; index++) {
+                Card card = (Card) hand_.get(index);
+                if (card.getNumber() == lastAddedCardNum) {
+
+                    sameCards = new Card[2];
+                    sameCards[0] = (Card) hand_.remove(lastIndex);
+                    sameCards[1] = (Card) hand_.remove(index);
+
+                    break;
+                }
+            }
         }
+        return sameCards;
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer string = new StringBuffer();
+        int size = hand_.size();
+        if (size>0) {
+            for (int index = 0; index < size; index++) {
+                Card card = (Card) hand_.get(index);
+                string.append(card);
+                string.append("  ");
+            }
+        }
+        return string.toString();
     }
 }
