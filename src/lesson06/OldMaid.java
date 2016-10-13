@@ -21,6 +21,7 @@ public class OldMaid {
         master.startGame();
     }
 
+
     private static Hand createTrump() {
         Hand trump = new Hand();
 
