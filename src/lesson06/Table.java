@@ -12,5 +12,6 @@ public class Table {
         System.out.println("を捨てました");
 
         disposedCards_.add(card);
+
     }
 }
