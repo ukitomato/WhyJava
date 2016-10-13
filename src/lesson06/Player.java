@@ -20,14 +20,14 @@ public class Player {
 
         dealCard(pickedCard);
 
-        if (myHand.getNumberOfCards() == 0) {
+        if (myHand_.getNumberOfCards() == 0) {
             master_.declareWin(this);
         } else {
             System.out.println(this+"残りの手札は"+myHand_+"です");
         }
     }
 
-    public Hand showHan() {
+    public Hand showHand() {
         if (myHand_.getNumberOfCards() == 1) {
             master_.declareWin(this);
         }
