@@ -15,5 +15,5 @@ public interface Table {
      *
      * @return テーブルに置かれたカードを返す
      */
-    public Card[][] getCard();
+    public Card[][] getCards();
 }
